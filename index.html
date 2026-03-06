@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bola & Tunde — 5 Years Strong</title>
+<meta name="description" content="Five years of laughter, lessons, and love. From first hello to forever.">
+<meta property="og:title" content="Bola & Tunde — 5 Years Strong">
+<meta property="og:description" content="Five years of laughter, lessons, and love. Send them a love note.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Italiana&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#FAF6F1;--bg2:#F3ECE2;--bg3:#FFF8F0;--surface:#FFFFFF;--surface2:#FDF7EF;
+  --terracotta:#C4795A;--terracotta-lt:#D99A7E;--terracotta-dk:#9E5A3E;--terracotta-pale:rgba(196,121,90,.08);
+  --sunset:#E8A87C;--warm:#D4A574;--sand:#C9B99A;--sand-lt:#E0D5C0;
+  --wine:#7A3B4E;--wine-lt:#9E5068;
+  --ink:#2A2018;--ink2:#483C2E;--ink3:#6B5D4E;--muted:#9E8E7A;--muted-lt:#BEB0A0;
+  --border:rgba(196,121,90,.15);--border2:rgba(42,32,24,.06);--heart:#C4795A;
+  --display:'Italiana',Georgia,serif;--serif:'Cormorant',Georgia,serif;--sans:'Jost',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--serif);background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--terracotta-lt);color:#fff}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--sand);border-radius:3px}
+
+/* ======= WARM GLOW PARTICLES ======= */
+.particles{position:fixed;inset:0;pointer-events:none;z-index:50;overflow:hidden}
+.particle{position:absolute;border-radius:50%;opacity:0}
+.particle:nth-child(1){width:6px;height:6px;background:var(--terracotta-lt);left:12%;top:-10px;animation:floatP1 14s ease-in-out infinite 0s}
+.particle:nth-child(2){width:4px;height:4px;background:var(--sunset);left:40%;top:-10px;animation:floatP2 18s ease-in-out infinite 3s}
+.particle:nth-child(3){width:5px;height:5px;background:var(--sand);left:68%;top:-10px;animation:floatP1 16s ease-in-out infinite 6s}
+.particle:nth-child(4){width:3px;height:3px;background:var(--warm);left:25%;top:-10px;animation:floatP2 15s ease-in-out infinite 8s}
+.particle:nth-child(5){width:5px;height:5px;background:var(--terracotta-lt);left:80%;top:-10px;animation:floatP1 17s ease-in-out infinite 2s}
+.particle:nth-child(6){width:4px;height:4px;background:var(--sunset);left:55%;top:-10px;animation:floatP2 13s ease-in-out infinite 5s}
+.particle:nth-child(7){width:3px;height:3px;background:var(--sand-lt);left:90%;top:-10px;animation:floatP1 19s ease-in-out infinite 10s}
+.particle:nth-child(8){width:5px;height:5px;background:var(--warm);left:5%;top:-10px;animation:floatP2 16s ease-in-out infinite 7s}
+@keyframes floatP1{0%{transform:translate(0,0);opacity:0}8%{opacity:.5}88%{opacity:.5}100%{transform:translate(-80px,100vh);opacity:0}}
+@keyframes floatP2{0%{transform:translate(0,0);opacity:0}8%{opacity:.35}88%{opacity:.35}100%{transform:translate(60px,100vh);opacity:0}}
+
+/* ======= NAV ======= */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;transition:all .4s}
+.nav.scrolled{background:rgba(250,246,241,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 1px 0 var(--border2)}
+.nav-logo{font-family:var(--display);font-size:16px;color:var(--terracotta);text-decoration:none;letter-spacing:.08em}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-family:var(--sans);font-size:12px;font-weight:400;letter-spacing:.08em;text-transform:lowercase;color:var(--muted);text-decoration:none;transition:color .3s}
+.nav-links a:hover{color:var(--terracotta)}
+
+/* ======= HERO ======= */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;padding:120px 24px 80px;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-15%;left:50%;transform:translateX(-50%);width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(232,168,124,.08) 0%,rgba(196,121,90,.04) 40%,transparent 70%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:160px;background:linear-gradient(to top,var(--bg),transparent);pointer-events:none}
+.hero-date{font-family:var(--sans);font-size:11px;font-weight:400;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:40px;opacity:0;animation:softUp .8s ease forwards}
+.hero-heart{font-size:20px;margin-bottom:28px;display:block;opacity:0;animation:softUp .8s ease .1s forwards}
+.hero-heart span{display:inline-block;animation:heartbeat 2s ease-in-out infinite}
+@keyframes heartbeat{0%,100%{transform:scale(1)}14%{transform:scale(1.15)}28%{transform:scale(1)}42%{transform:scale(1.1)}56%{transform:scale(1)}}
+.hero-parallax{will-change:transform;transition:transform .05s linear}
+.hero-names{font-family:var(--display);font-size:clamp(42px,7vw,80px);font-weight:400;color:var(--ink);letter-spacing:.06em;line-height:1.1;margin-bottom:8px;opacity:0;animation:softUp .8s ease .2s forwards}
+.hero-amp{font-family:var(--serif);font-style:italic;font-weight:300;color:var(--terracotta);font-size:.75em;margin:0 8px}
+.hero-years{font-family:var(--serif);font-size:clamp(18px,2.5vw,24px);font-weight:300;font-style:italic;color:var(--terracotta);letter-spacing:.04em;margin-bottom:24px;opacity:0;animation:softUp .8s ease .3s forwards}
+.hero-tagline{font-family:var(--serif);font-size:clamp(16px,2vw,20px);font-weight:300;font-style:italic;color:var(--muted);max-width:380px;line-height:1.8;margin-bottom:44px;opacity:0;animation:softUp .8s ease .4s forwards}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;opacity:0;animation:softUp .8s ease .5s forwards}
+
+/* ======= BUTTONS ======= */
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.1em;padding:15px 34px;cursor:pointer;text-decoration:none;border:none;transition:all .35s cubic-bezier(.25,.8,.25,1)}
+.btn-terra{background:var(--terracotta);color:#fff;border-radius:0}
+.btn-terra:hover{background:var(--terracotta-dk);transform:translateY(-2px);box-shadow:0 12px 32px rgba(196,121,90,.25)}
+.btn-outline{background:transparent;color:var(--ink3);border:1.5px solid var(--border);border-radius:0}
+.btn-outline:hover{border-color:var(--terracotta);color:var(--terracotta);transform:translateY(-2px)}
+
+/* ======= COUNTDOWN ======= */
+.countdown-section{padding:0 24px 80px;text-align:center}
+.cd-label-text{font-family:var(--serif);font-size:15px;font-style:italic;font-weight:300;color:var(--muted);margin-bottom:20px}
+.countdown-bar{display:inline-flex;gap:6px;align-items:center}
+.cd-block{text-align:center;background:var(--surface);border:1px solid var(--border);padding:22px 20px;min-width:80px}
+.cd-num{font-family:var(--display);font-size:clamp(28px,4vw,42px);color:var(--ink);line-height:1;display:inline-block;margin-bottom:4px;letter-spacing:.04em}
+.cd-lbl{font-family:var(--sans);font-size:9px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--muted-lt)}
+.cd-dot{font-size:8px;color:var(--terracotta-lt);padding:0 2px}
+.cd-num.flip{animation:cdFlip .4s ease}
+@keyframes cdFlip{0%{transform:translateY(0);opacity:1}40%{transform:translateY(-30%);opacity:0}60%{transform:translateY(30%);opacity:0}100%{transform:translateY(0);opacity:1}}
+
+/* ======= OUR STORY ======= */
+.story{padding:clamp(80px,12vw,140px) 24px;position:relative}
+.story-inner{max-width:620px;margin:0 auto;text-align:center}
+.section-tag{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--terracotta);margin-bottom:28px;display:flex;align-items:center;justify-content:center;gap:12px}
+.section-tag::before,.section-tag::after{content:'';width:20px;height:1px;background:var(--terracotta-lt)}
+.story-text{font-family:var(--serif);font-size:clamp(19px,2.5vw,24px);font-weight:300;line-height:2;color:var(--ink2);font-style:italic}
+.story-text em{font-style:normal;color:var(--terracotta);font-weight:400}
+.story-text .break{display:block;height:20px}
+
+/* ======= TIMELINE ======= */
+.timeline{padding:clamp(80px,10vw,120px) 24px;background:var(--surface);position:relative}
+.timeline::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent)}
+.timeline-inner{max-width:700px;margin:0 auto}
+.timeline-line{position:relative;padding-left:48px}
+.timeline-line::before{content:'';position:absolute;left:15px;top:0;bottom:0;width:1px;background:linear-gradient(180deg,var(--terracotta-lt),var(--sand-lt),var(--terracotta-lt))}
+.tl-item{position:relative;padding-bottom:48px}
+.tl-item:last-child{padding-bottom:0}
+.tl-dot{position:absolute;left:-40px;top:4px;width:18px;height:18px;border-radius:50%;background:var(--bg);border:2px solid var(--terracotta-lt);display:flex;align-items:center;justify-content:center}
+.tl-dot::after{content:'';width:6px;height:6px;border-radius:50%;background:var(--terracotta)}
+.tl-item:first-child .tl-dot,.tl-item:last-child .tl-dot{border-color:var(--terracotta);width:22px;height:22px;left:-42px;top:2px}
+.tl-item:last-child .tl-dot::after{background:var(--terracotta);width:8px;height:8px}
+.tl-year{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--terracotta);margin-bottom:6px}
+.tl-title{font-family:var(--display);font-size:22px;color:var(--ink);letter-spacing:.04em;margin-bottom:8px}
+.tl-desc{font-family:var(--serif);font-size:16px;font-weight:300;font-style:italic;color:var(--muted);line-height:1.7}
+
+/* ======= GALLERY ======= */
+.gallery{padding:clamp(60px,10vw,120px) 24px;background:var(--bg2)}
+.gallery-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:auto auto;gap:6px}
+.gal-item{position:relative;overflow:hidden;cursor:pointer;background:var(--surface)}
+.gal-item:nth-child(1){grid-column:1/3;grid-row:1/2}
+.gal-item:nth-child(4){grid-row:2/3;grid-column:3/4}
+.gal-placeholder{width:100%;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,var(--surface2) 0%,var(--bg2) 100%);transition:background .4s}
+.gal-item:nth-child(1) .gal-placeholder{aspect-ratio:2/1}
+.gal-item:hover .gal-placeholder{background:linear-gradient(135deg,var(--bg2) 0%,rgba(196,121,90,.04) 100%)}
+.gal-placeholder svg{width:24px;height:24px;color:var(--sand);opacity:.5}
+.gal-placeholder span{font-family:var(--sans);font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted-lt)}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.25,.8,.25,1),opacity .5s ease;opacity:0}
+.gal-item img.loaded{opacity:1}
+.gal-item:hover img{transform:scale(1.04)}
+
+/* ======= LIGHTBOX ======= */
+.lightbox{position:fixed;inset:0;z-index:500;background:rgba(42,32,24,.95);display:flex;align-items:center;justify-content:center;padding:40px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.lightbox.open{opacity:1;visibility:visible}
+.lightbox img{max-width:90%;max-height:85vh;object-fit:contain;border:1px solid var(--border);transform:scale(.9);transition:transform .35s cubic-bezier(.25,.8,.25,1)}
+.lightbox.open img{transform:scale(1)}
+.lb-close{position:absolute;top:24px;right:24px;width:44px;height:44px;background:var(--surface);border:1px solid var(--border);color:var(--ink3);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s}
+.lb-close:hover{border-color:var(--terracotta);color:var(--terracotta)}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;background:var(--surface);border:1px solid var(--border);color:var(--ink3);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s}
+.lb-nav:hover{border-color:var(--terracotta);color:var(--terracotta)}
+.lb-prev{left:24px}.lb-next{right:24px}
+.lb-counter{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-family:var(--sans);font-size:11px;letter-spacing:.15em;color:var(--muted-lt);background:var(--surface);padding:6px 16px}
+
+/* ======= LOVE COUNTER ======= */
+.love-counter{padding:clamp(80px,10vw,120px) 24px;text-align:center}
+.love-counter-inner{max-width:700px;margin:0 auto}
+.love-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-top:40px}
+.love-stat{background:var(--bg);padding:36px 16px;text-align:center}
+.love-stat-num{font-family:var(--display);font-size:clamp(32px,4vw,48px);color:var(--terracotta);line-height:1;display:block;margin-bottom:8px;letter-spacing:.04em}
+.love-stat-label{font-family:var(--serif);font-size:14px;font-weight:300;font-style:italic;color:var(--muted)}
+
+/* ======= LOVE NOTES ======= */
+.notes{padding:clamp(80px,10vw,140px) 24px;background:var(--surface);position:relative}
+.notes::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--sand-lt),transparent)}
+.notes-inner{max-width:620px;margin:0 auto}
+.notes-header{text-align:center;margin-bottom:48px}
+.notes-title{font-family:var(--display);font-size:clamp(26px,4vw,38px);color:var(--ink);margin-bottom:8px;letter-spacing:.06em}
+.notes-sub{font-family:var(--serif);font-size:16px;font-style:italic;color:var(--muted);font-weight:300}
+.notes-count{font-family:var(--sans);font-size:11px;letter-spacing:.12em;color:var(--terracotta);margin-top:12px}
+/* Partner notes */
+.partner-notes{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:40px}
+.partner-note{padding:28px 24px;background:var(--bg);border:1px solid var(--border);position:relative}
+.partner-note::before{content:'❤️';position:absolute;top:14px;right:16px;font-size:12px;opacity:.4}
+.partner-note-from{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--terracotta);margin-bottom:12px}
+.partner-note-text{font-family:var(--serif);font-size:16px;font-weight:300;font-style:italic;color:var(--ink2);line-height:1.8}
+/* Note form */
+.note-form{margin-bottom:36px;background:var(--bg);border:1px solid var(--border);padding:28px}
+.note-input-group{margin-bottom:14px}
+.note-input,.note-textarea{width:100%;font-family:var(--serif);font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--border2);padding:13px 18px;outline:none;transition:border-color .3s,box-shadow .3s}
+.note-input::placeholder,.note-textarea::placeholder{color:var(--muted-lt);font-style:italic}
+.note-input:focus,.note-textarea:focus{border-color:var(--terracotta-lt);box-shadow:0 0 0 3px rgba(196,121,90,.08)}
+.note-textarea{min-height:110px;resize:vertical;line-height:1.8}
+.note-form-footer{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.note-char{font-family:var(--sans);font-size:11px;color:var(--muted-lt)}
+.btn-send{background:var(--terracotta);color:#fff;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:13px 28px;border:none;cursor:pointer;transition:all .3s}
+.btn-send:hover{background:var(--terracotta-dk);box-shadow:0 8px 24px rgba(196,121,90,.2)}
+.btn-send:disabled{opacity:.35;cursor:not-allowed}
+/* Note cards */
+.note-list{display:flex;flex-direction:column;gap:14px}
+.note-card{padding:24px;background:var(--bg);border:1px solid var(--border2);position:relative;transition:border-color .3s}
+.note-card:hover{border-color:var(--border)}
+.note-card::before{content:'\201C';font-family:var(--serif);font-size:44px;color:var(--terracotta);opacity:.12;position:absolute;top:8px;left:18px;line-height:1}
+.note-text{font-family:var(--serif);font-size:16px;color:var(--ink2);line-height:1.8;font-weight:300;font-style:italic;margin-bottom:12px;padding-left:4px}
+.note-author{font-family:var(--sans);font-size:12px;font-weight:500;color:var(--terracotta);display:flex;align-items:center;gap:8px}
+.note-author::before{content:'';width:12px;height:1px;background:var(--terracotta-lt)}
+.note-time{font-weight:400;color:var(--muted-lt)}
+/* Like button */
+.note-like{background:var(--surface);border:1px solid var(--border);padding:5px 12px;font-size:14px;cursor:pointer;display:inline-flex;align-items:center;gap:5px;transition:all .25s;margin-top:10px}
+.note-like:hover{border-color:var(--terracotta);background:var(--terracotta-pale);transform:scale(1.05)}
+.note-like.liked{border-color:var(--terracotta);background:var(--terracotta-pale)}
+.note-like-count{font-family:var(--sans);font-size:11px;color:var(--muted);font-weight:600}
+
+/* ======= CLOSING ======= */
+.closing{padding:clamp(80px,12vw,140px) 24px;text-align:center;position:relative;overflow:hidden}
+.closing::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(196,121,90,.06) 0%,transparent 60%);pointer-events:none}
+.closing-inner{position:relative;z-index:1;max-width:460px;margin:0 auto}
+.closing-emoji{font-size:32px;margin-bottom:24px;display:block}
+.closing-title{font-family:var(--display);font-size:clamp(28px,4vw,42px);color:var(--ink);margin-bottom:16px;letter-spacing:.06em;line-height:1.3}
+.closing-text{font-family:var(--serif);font-size:18px;color:var(--muted);font-weight:300;font-style:italic;line-height:1.9;margin-bottom:36px}
+.share-row{display:flex;justify-content:center;gap:10px}
+.share-btn{width:44px;height:44px;border:1px solid var(--border);background:var(--surface);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s;text-decoration:none}
+.share-btn:hover{border-color:var(--terracotta);background:var(--terracotta-pale);transform:translateY(-2px)}
+.share-btn svg{width:16px;height:16px;color:var(--terracotta)}
+
+/* ======= MUSIC ======= */
+.music-btn{position:fixed;bottom:28px;left:28px;z-index:200;width:46px;height:46px;border-radius:50%;background:var(--surface);border:1px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s;box-shadow:0 4px 16px rgba(42,32,24,.08)}
+.music-btn:hover{border-color:var(--terracotta);transform:scale(1.08)}
+.music-btn.playing{border-color:var(--terracotta);animation:mPulse 2s ease-in-out infinite}
+@keyframes mPulse{0%,100%{box-shadow:0 4px 16px rgba(42,32,24,.08),0 0 0 0 rgba(196,121,90,.2)}50%{box-shadow:0 4px 16px rgba(42,32,24,.08),0 0 0 10px rgba(196,121,90,0)}}
+.sound-bars{display:flex;align-items:flex-end;gap:2px;height:14px}
+.sound-bars .bar{width:3px;background:var(--terracotta);border-radius:1px;transition:height .2s}
+.music-btn:not(.playing) .sound-bars .bar{height:3px!important}
+.music-btn.playing .sound-bars .bar:nth-child(1){animation:eqBar .8s ease-in-out infinite 0s}
+.music-btn.playing .sound-bars .bar:nth-child(2){animation:eqBar .6s ease-in-out infinite .1s}
+.music-btn.playing .sound-bars .bar:nth-child(3){animation:eqBar .7s ease-in-out infinite .2s}
+.music-btn.playing .sound-bars .bar:nth-child(4){animation:eqBar .5s ease-in-out infinite .15s}
+@keyframes eqBar{0%,100%{height:3px}50%{height:14px}}
+
+/* ======= FOOTER ======= */
+.footer{padding:36px 24px;text-align:center;border-top:1px solid var(--border2)}
+.footer-logo{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-lt);text-decoration:none;display:inline-flex;align-items:center;gap:6px;margin-bottom:6px}
+.footer-logo span{color:var(--terracotta)}
+.footer-text{font-family:var(--serif);font-size:13px;font-style:italic;color:var(--muted-lt)}
+
+/* ======= TOAST ======= */
+.toast-notif{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--terracotta);color:#fff;font-family:var(--sans);font-size:13px;font-weight:600;padding:14px 28px;z-index:600;opacity:0;transition:all .4s cubic-bezier(.25,.8,.25,1);white-space:nowrap}
+.toast-notif.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ======= ANIMATIONS ======= */
+@keyframes softUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:translateY(0)}
+
+/* ======= RESPONSIVE ======= */
+@media(max-width:768px){
+.nav-links{display:none}.nav{padding:16px 20px}
+.hero{padding:100px 20px 60px;min-height:90vh}.hero-cta{flex-direction:column;align-items:center}.btn{width:100%;max-width:260px;justify-content:center}
+.countdown-bar{flex-wrap:nowrap;gap:4px}.cd-block{min-width:60px;padding:16px 10px}.cd-dot{display:none}
+.timeline-line{padding-left:36px}.tl-dot{left:-28px}.tl-item:first-child .tl-dot,.tl-item:last-child .tl-dot{left:-30px}
+.gallery-grid{grid-template-columns:1fr 1fr}.gal-item:nth-child(1){grid-column:1/3}.gal-item:nth-child(4){grid-column:auto;grid-row:auto}
+.love-stats{grid-template-columns:1fr 1fr}
+.partner-notes{grid-template-columns:1fr}
+.note-form{padding:20px}.note-form-footer{flex-direction:column;align-items:stretch}.note-char{text-align:center}
+.music-btn{bottom:20px;left:20px;width:40px;height:40px}
+.lb-prev{left:12px}.lb-next{right:12px}.lb-nav{width:36px;height:36px;font-size:14px}
+}
+@media(max-width:480px){
+.cd-block{min-width:50px;padding:12px 8px}.cd-num{font-size:24px}
+.love-stat{padding:24px 12px}
+.particle{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- WARM GLOW PARTICLES -->
+<div class="particles">
+  <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+  <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+  <div class="particle"></div><div class="particle"></div>
+</div>
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop preload="none"><source src="music/vibe.mp3" type="audio/mpeg"></audio>
+<button class="music-btn" id="musicBtn" title="Toggle music" aria-label="Toggle background music">
+  <div class="sound-bars"><div class="bar" style="height:3px"></div><div class="bar" style="height:3px"></div><div class="bar" style="height:3px"></div><div class="bar" style="height:3px"></div></div>
+</button>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo">B & T</a>
+  <ul class="nav-links">
+    <li><a href="#story">our story</a></li>
+    <li><a href="#timeline">timeline</a></li>
+    <li><a href="#gallery">gallery</a></li>
+    <li><a href="#notes">love notes</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-date">Est. June 14, 2021</div>
+  <div class="hero-heart"><span>❤️</span></div>
+  <div class="hero-parallax" id="heroParallax">
+    <h1 class="hero-names">Bola <span class="hero-amp">&</span> Tunde</h1>
+    <p class="hero-years">5 Years Strong</p>
+  </div>
+  <p class="hero-tagline">From first hello to forever.<br>Five years of laughter, lessons, and love.</p>
+  <div class="hero-cta">
+    <a href="#notes" class="btn btn-terra">Send a Love Note 💕</a>
+    <a href="#story" class="btn btn-outline">Read Our Story</a>
+  </div>
+</section>
+
+<!-- COUNTDOWN (Together for — counts UP) -->
+<section class="countdown-section rv">
+  <div class="cd-label-text">Together for</div>
+  <div class="countdown-bar">
+    <div class="cd-block"><span class="cd-num" id="cd-y">05</span><span class="cd-lbl">Years</span></div>
+    <span class="cd-dot">•</span>
+    <div class="cd-block"><span class="cd-num" id="cd-mo">08</span><span class="cd-lbl">Months</span></div>
+    <span class="cd-dot">•</span>
+    <div class="cd-block"><span class="cd-num" id="cd-d">17</span><span class="cd-lbl">Days</span></div>
+    <span class="cd-dot">•</span>
+    <div class="cd-block"><span class="cd-num" id="cd-h">00</span><span class="cd-lbl">Hours</span></div>
+  </div>
+</section>
+
+<!-- OUR STORY -->
+<section class="story rv" id="story">
+  <div class="story-inner">
+    <div class="section-tag">Our Story</div>
+    <p class="story-text">
+      We met <em>unexpectedly.</em><br>
+      We stayed <em>intentionally.</em>
+      <span class="break"></span>
+      Through seasons of growth and storms of learning,
+      we chose each other <em>again and again.</em>
+      <span class="break"></span>
+      Five years later, we're still here.<br>
+      <em>Stronger. Softer. Surer.</em>
+    </p>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline rv" id="timeline">
+  <div class="timeline-inner">
+    <div class="section-tag" style="margin-bottom:48px;">How We Got Here</div>
+    <div class="timeline-line">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">June 2021</div>
+        <div class="tl-title">The First Hello</div>
+        <div class="tl-desc">A mutual friend's birthday party. She laughed at his joke. He didn't forget her smile. The rest, they say, wrote itself.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">December 2021</div>
+        <div class="tl-title">Made It Official</div>
+        <div class="tl-desc">Six months of late-night calls, long drives, and "one more episode." He asked. She said yes before he finished the sentence.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">August 2022</div>
+        <div class="tl-title">First Trip Together</div>
+        <div class="tl-desc">Zanzibar. Sunsets, seafood, and a promise to see the world side by side. They came back different — closer, surer.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">March 2024</div>
+        <div class="tl-title">Moved In Together</div>
+        <div class="tl-desc">One apartment. Two toothbrushes. A hundred reasons to argue about who left the light on. They loved every minute of it.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">June 2026</div>
+        <div class="tl-title">5 Years Strong</div>
+        <div class="tl-desc">Five years of choosing each other. Not because it was easy, but because nothing else made more sense. The best chapter yet.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery rv" id="gallery">
+  <div class="section-tag" style="margin-bottom:40px;">Moments</div>
+  <div class="gallery-grid">
+    <div class="gal-item" data-lb="0">
+      <img src="images/1.jpg" alt="Holding Hands" decoding="async">>
+    </div>
+    <div class="gal-item" data-lb="1">
+      <img src="images/2.jpg" alt="Sunset Silhouette" decoding="async" loading="lazy">
+    </div>
+    <div class="gal-item" data-lb="2">
+      <img src="images/3.jpg" alt="Casual home" decoding="async" loading="lazy">
+    </div>
+    <div class="gal-item" data-lb="3">
+      <img src="images/4.jpg" alt="Laughing together" decoding="async" loading="lazy">
+    </div>
+    <div class="gal-item" data-lb="4">
+     <img src="images/5.jpg" alt="Forehead kiss" decoding="async" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" aria-label="Close">&#10005;</button>
+  <button class="lb-nav lb-prev" aria-label="Previous">&#8249;</button>
+  <button class="lb-nav lb-next" aria-label="Next">&#8250;</button>
+  <img id="lb-img" src="" alt="Gallery image">
+  <div class="lb-counter"><span id="lb-current">1</span> / <span id="lb-total">5</span></div>
+</div>
+
+<!-- LOVE COUNTER -->
+<section class="love-counter rv" id="stats">
+  <div class="love-counter-inner">
+    <div class="section-tag">By The Numbers</div>
+    <div class="love-stats">
+      <div class="love-stat">
+        <span class="love-stat-num" id="stat-days" data-target="0">0</span>
+        <span class="love-stat-label">days together</span>
+      </div>
+      <div class="love-stat">
+        <span class="love-stat-num" data-target="4">0</span>
+        <span class="love-stat-label">countries visited</span>
+      </div>
+      <div class="love-stat">
+        <span class="love-stat-num" data-target="0" data-symbol="∞">∞</span>
+        <span class="love-stat-label">arguments about jollof</span>
+      </div>
+      <div class="love-stat">
+        <span class="love-stat-num" data-target="1">0</span>
+        <span class="love-stat-label">forever person</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOVE NOTES -->
+<section class="notes rv" id="notes">
+  <div class="notes-inner">
+    <div class="notes-header">
+      <div class="section-tag">Love Notes</div>
+      <h2 class="notes-title">Send Them a Note</h2>
+      <p class="notes-sub">A message, a memory, a prayer for their journey together.</p>
+      <p class="notes-count"><span id="note-count">0</span> love notes received</p>
+    </div>
+
+    <!-- Partner notes to each other -->
+    <div class="partner-notes">
+      <div class="partner-note">
+        <div class="partner-note-from">From Bola → Tunde</div>
+        <p class="partner-note-text">You make the ordinary feel like magic. Thank you for choosing me every single day. Five years, and I'd still pick you first.</p>
+      </div>
+      <div class="partner-note">
+        <div class="partner-note-from">From Tunde → Bola</div>
+        <p class="partner-note-text">You're my peace in a loud world. The best decision I ever made was not letting you leave that party without getting your number.</p>
+      </div>
+    </div>
+
+    <div class="note-form" id="noteForm">
+      <div class="note-input-group">
+        <input class="note-input" type="text" id="n-name" placeholder="Your name" maxlength="40">
+      </div>
+      <div class="note-input-group">
+        <textarea class="note-textarea" id="n-msg" placeholder="Write your love note..." maxlength="350"></textarea>
+      </div>
+      <div class="note-form-footer">
+        <span class="note-char"><span id="n-count">0</span> / 350</span>
+        <button class="btn-send" id="n-send" disabled>Send Note 💕</button>
+      </div>
+    </div>
+
+    <div class="note-list" id="noteList">
+      <!-- Notes load from database -->
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="closing">
+  <div class="closing-inner rv">
+    <span class="closing-emoji">🕊️</span>
+    <h2 class="closing-title">Still choosing.<br>Still becoming.<br>Still us.</h2>
+    <p class="closing-text">Five years is just the first chapter.<br>The love story continues.</p>
+    <div class="share-row">
+      <a class="share-btn" title="Share on WhatsApp" href="https://wa.me/?text=Bola%20%26%20Tunde%20are%20celebrating%205%20years!%20%E2%9D%A4%EF%B8%8F%20Send%20them%20a%20love%20note%3A" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.559 4.143 1.534 5.88L0 24l6.305-1.654A11.955 11.955 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82a9.796 9.796 0 0 1-5.16-1.46l-.37-.22-3.838 1.006 1.024-3.74-.24-.383A9.793 9.793 0 0 1 2.18 12c0-5.422 4.398-9.82 9.82-9.82 5.422 0 9.82 4.398 9.82 9.82 0 5.422-4.398 9.82-9.82 9.82z"/></svg>
+      </a>
+      <button class="share-btn" title="Copy link" onclick="copyLink()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      </button>
+      <a class="share-btn" title="Share on Twitter" href="https://twitter.com/intent/tweet?text=Bola%20%26%20Tunde%20are%20celebrating%205%20years!%20%E2%9D%A4%EF%B8%8F" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <a href="https://momentsite.com" class="footer-logo" target="_blank">Powered by <span>MomentSite</span></a>
+  <p class="footer-text">Made for the moment. Kept for the memory.</p>
+</footer>
+
+<!-- TOAST -->
+<div class="toast-notif" id="toastNotif"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+var SUPABASE_URL='https://ojulewzgsdkmqdzkpurp.supabase.co';
+var SUPABASE_KEY='sb_publishable_u2xfyEnZ5wOF0nBven2kWg_AqSMWNVD';
+var sb=supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
+var TABLE='notes_bola_tunde';
+
+// ======= MUSIC TOGGLE =======
+(function(){
+  var audio=document.getElementById('bgMusic');
+  var btn=document.getElementById('musicBtn');
+  var isPlaying=false;
+  btn.addEventListener('click',function(){
+    if(isPlaying){
+      audio.pause();btn.classList.remove('playing');isPlaying=false;
+    } else {
+      audio.play().then(function(){
+        btn.classList.add('playing');isPlaying=true;
+      }).catch(function(){showToast('Add music/vibe.mp3 to enable audio');});
+    }
+  });
+})();
+
+// ======= HERO PARALLAX =======
+(function(){
+  var el=document.getElementById('heroParallax');
+  var hero=document.querySelector('.hero');
+  window.addEventListener('scroll',function(){
+    if(hero.getBoundingClientRect().bottom>0){
+      el.style.transform='translateY('+(window.scrollY*0.3)+'px)';
+    }
+  },{passive:true});
+})();
+
+// ======= TOGETHER COUNTER (counts UP) =======
+(function(){
+  var start=new Date('2021-06-14T00:00:00+01:00');
+  var prevVals={y:'',mo:'',d:'',h:''};
+
+  function flipIf(id,val,key){
+    var el=document.getElementById(id);
+    if(val!==prevVals[key]){
+      el.textContent=val;
+      el.classList.remove('flip');
+      void el.offsetWidth;
+      el.classList.add('flip');
+      prevVals[key]=val;
+    }
+  }
+
+  function tick(){
+    var now=new Date();
+    var diff=now-start;
+    if(diff<0) return;
+
+    var y=now.getFullYear()-start.getFullYear();
+    var m=now.getMonth()-start.getMonth();
+    var d=now.getDate()-start.getDate();
+    var h=now.getHours()-start.getHours();
+
+    if(h<0){h+=24;d--;}
+    if(d<0){
+      m--;
+      var prev=new Date(now.getFullYear(),now.getMonth(),0).getDate();
+      d+=prev;
+    }
+    if(m<0){m+=12;y--;}
+
+    flipIf('cd-y',String(y).padStart(2,'0'),'y');
+    flipIf('cd-mo',String(m).padStart(2,'0'),'mo');
+    flipIf('cd-d',String(d).padStart(2,'0'),'d');
+    flipIf('cd-h',String(h).padStart(2,'0'),'h');
+
+    // Update days stat target for animation
+    var totalDays=Math.floor(diff/86400000);
+    var daysEl=document.getElementById('stat-days');
+    if(daysEl) daysEl.dataset.target=totalDays;
+  }
+  tick();
+  setInterval(tick,60000);
+})();
+
+// ======= NAV SCROLL =======
+window.addEventListener('scroll',function(){
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);
+},{passive:true});
+
+// ======= SCROLL REVEAL =======
+var observer=new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){if(entry.isIntersecting) entry.target.classList.add('in');});
+},{threshold:0.1});
+document.querySelectorAll('.rv').forEach(function(el){observer.observe(el);});
+
+// ======= LOVE STATS COUNT-UP ANIMATION =======
+(function(){
+  var animated=false;
+  var statsSection=document.getElementById('stats');
+
+  var statsObs=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting && !animated){
+        animated=true;
+        animateStats();
+      }
+    });
+  },{threshold:0.3});
+
+  if(statsSection) statsObs.observe(statsSection);
+
+  function animateStats(){
+    var nums=document.querySelectorAll('.love-stat-num[data-target]');
+    nums.forEach(function(el){
+      var target=parseInt(el.dataset.target);
+      var symbol=el.dataset.symbol;
+
+      // Skip infinity symbol
+      if(symbol==='∞'){el.textContent='∞';return;}
+      if(isNaN(target)||target===0){
+        // Will be set by together counter
+        var checkInterval=setInterval(function(){
+          var t=parseInt(el.dataset.target);
+          if(t>0){
+            clearInterval(checkInterval);
+            countUp(el,t);
+          }
+        },200);
+        return;
+      }
+      countUp(el,target);
+    });
+  }
+
+  function countUp(el,target){
+    var duration=1500;
+    var start=0;
+    var startTime=null;
+
+    function step(timestamp){
+      if(!startTime) startTime=timestamp;
+      var progress=Math.min((timestamp-startTime)/duration,1);
+      // Ease out cubic
+      var eased=1-Math.pow(1-progress,3);
+      var current=Math.floor(eased*target);
+      el.textContent=current.toLocaleString();
+      if(progress<1){
+        requestAnimationFrame(step);
+      } else {
+        el.textContent=target.toLocaleString();
+      }
+    }
+    requestAnimationFrame(step);
+  }
+})();
+
+// ======= GALLERY LIGHTBOX =======
+(function(){
+  var lb=document.getElementById('lightbox');
+  var lbImg=document.getElementById('lb-img');
+  var lbCurrent=document.getElementById('lb-current');
+  var items=document.querySelectorAll('.gal-item[data-lb]');
+  var srcs=[];
+  var idx=0;
+
+  items.forEach(function(item){
+    var img=item.querySelector('img');
+    if(img) srcs.push(img.src);
+  });
+  document.getElementById('lb-total').textContent=srcs.length||items.length;
+
+  function openLb(i){
+    if(!srcs.length) return;
+    idx=i;lbImg.src=srcs[idx];lbCurrent.textContent=idx+1;
+    lb.classList.add('open');document.body.style.overflow='hidden';
+  }
+  function closeLb(){lb.classList.remove('open');document.body.style.overflow='';}
+  function nextLb(){idx=(idx+1)%srcs.length;lbImg.src=srcs[idx];lbCurrent.textContent=idx+1;}
+  function prevLb(){idx=(idx-1+srcs.length)%srcs.length;lbImg.src=srcs[idx];lbCurrent.textContent=idx+1;}
+
+  items.forEach(function(item){
+    item.addEventListener('click',function(){
+      srcs=[];
+      items.forEach(function(it){var img=it.querySelector('img');if(img) srcs.push(img.src);});
+      if(srcs.length) openLb(parseInt(this.dataset.lb));
+    });
+  });
+  lb.querySelector('.lb-close').addEventListener('click',closeLb);
+  lb.querySelector('.lb-prev').addEventListener('click',function(e){e.stopPropagation();prevLb();});
+  lb.querySelector('.lb-next').addEventListener('click',function(e){e.stopPropagation();nextLb();});
+  lb.addEventListener('click',function(e){if(e.target===lb) closeLb();});
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key==='Escape') closeLb();
+    if(e.key==='ArrowRight') nextLb();
+    if(e.key==='ArrowLeft') prevLb();
+  });
+})();
+
+// ======= IMAGE FADE IN =======
+document.querySelectorAll('.gal-item img').forEach(function(img){
+  if(img.complete){img.classList.add('loaded');}
+  else{img.addEventListener('load',function(){img.classList.add('loaded');});}
+});
+
+// ======= LIKE BUTTON HANDLER =======
+function bindLike(btn){
+  btn.addEventListener('click',async function(){
+    var id=this.dataset.id;
+    var countEl=this.querySelector('.note-like-count');
+    var current=parseInt(countEl.textContent);
+
+    if(this.classList.contains('liked')){
+      this.classList.remove('liked');
+      countEl.textContent=Math.max(0,current-1);
+      if(id){await sb.from(TABLE).update({likes:Math.max(0,current-1)}).eq('id',id);}
+    } else {
+      this.classList.add('liked');
+      countEl.textContent=current+1;
+      if(id){await sb.from(TABLE).update({likes:current+1}).eq('id',id);}
+    }
+  });
+}
+
+// ======= LOAD NOTES FROM DB =======
+var noteCountEl=document.getElementById('note-count');
+var noteList=document.getElementById('noteList');
+
+async function loadNotes(){
+  var result=await sb.from(TABLE).select('*').order('created_at',{ascending:false});
+  if(result.error){console.error('Load error:',result.error);return;}
+
+  noteCountEl.textContent=result.data.length;
+  noteList.innerHTML='';
+
+  result.data.forEach(function(n){
+    var card=document.createElement('div');
+    card.className='note-card';
+    card.innerHTML='<p class="note-text">'+esc(n.message)+'</p>'+
+      '<div class="note-author">'+esc(n.name)+' <span class="note-time">\u00b7 '+timeAgo(n.created_at)+'</span></div>'+
+      '<button class="note-like" data-id="'+n.id+'">💕 <span class="note-like-count">'+(n.likes||0)+'</span></button>';
+    bindLike(card.querySelector('.note-like'));
+    noteList.appendChild(card);
+  });
+}
+
+function timeAgo(dateStr){
+  var now=new Date();var then=new Date(dateStr);
+  var diff=Math.floor((now-then)/1000);
+  if(diff<60) return 'just now';
+  if(diff<3600) return Math.floor(diff/60)+' min ago';
+  if(diff<86400) return Math.floor(diff/3600)+' hours ago';
+  if(diff<604800) return Math.floor(diff/86400)+' days ago';
+  return then.toLocaleDateString('en-NG',{month:'short',day:'numeric'});
+}
+
+loadNotes();
+
+// ======= NOTE FORM =======
+var textarea=document.getElementById('n-msg');
+var nameInput=document.getElementById('n-name');
+var charCount=document.getElementById('n-count');
+var sendBtn=document.getElementById('n-send');
+
+textarea.addEventListener('input',function(){
+  charCount.textContent=this.value.length;
+  sendBtn.disabled=this.value.trim().length<3||nameInput.value.trim().length<1;
+});
+nameInput.addEventListener('input',function(){
+  sendBtn.disabled=textarea.value.trim().length<3||this.value.trim().length<1;
+});
+
+sendBtn.addEventListener('click',async function(){
+  var name=nameInput.value.trim();
+  var msg=textarea.value.trim();
+  if(!name||msg.length<3) return;
+
+  sendBtn.disabled=true;
+  sendBtn.textContent='SENDING...';
+
+  var result=await sb.from(TABLE).insert([{name:name,message:msg}]).select();
+
+  if(result.error){
+    console.error('Error:',result.error);
+    sendBtn.textContent='SEND NOTE 💕';
+    sendBtn.disabled=false;
+    showToast('Something went wrong. Try again.');
+    return;
+  }
+
+  var count=parseInt(noteCountEl.textContent)+1;
+  noteCountEl.textContent=count;
+
+  var card=document.createElement('div');
+  card.className='note-card';
+  card.style.opacity='0';card.style.transform='translateY(12px)';
+  card.innerHTML='<p class="note-text">'+esc(msg)+'</p>'+
+    '<div class="note-author">'+esc(name)+' <span class="note-time">\u00b7 just now</span></div>'+
+    '<button class="note-like" data-id="'+(result.data[0].id)+'">💕 <span class="note-like-count">0</span></button>';
+
+  noteList.insertBefore(card,noteList.firstChild);
+  requestAnimationFrame(function(){
+    card.style.transition='all .5s ease';
+    card.style.opacity='1';card.style.transform='translateY(0)';
+  });
+
+  bindLike(card.querySelector('.note-like'));
+
+  nameInput.value='';textarea.value='';charCount.textContent='0';
+  sendBtn.textContent='SEND NOTE 💕';
+  sendBtn.disabled=true;
+  showToast('Love note sent! 💕');
+});
+
+function esc(s){
+  var d=document.createElement('div');d.textContent=s;return d.innerHTML;
+}
+
+// ======= TOAST =======
+function showToast(msg){
+  var t=document.getElementById('toastNotif');
+  t.textContent=msg;t.classList.add('show');
+  setTimeout(function(){t.classList.remove('show');},3000);
+}
+
+// ======= COPY LINK =======
+function copyLink(){
+  navigator.clipboard.writeText(window.location.href).then(function(){showToast('Link copied! ❤️');});
+}
+
+// ======= SMOOTH SCROLL =======
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var t=document.querySelector(this.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+</script>
+</body>
+</html>
